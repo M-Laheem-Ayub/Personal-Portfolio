@@ -1,0 +1,49 @@
+#btn-img {
+    width: 17px;
+    height: 17px;
+    transition: all 0.2s ease;
+}
+
+.btn {
+    border-radius: 4px !important;
+    transition: all 0.2s ease;
+}
+
+#btn-text {
+    font-family: "Sora", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    transition: all 0.2s ease;
+}
+
+#btn-text:hover {
+    color: black !important;
+}
+
+.btn:hover {
+    background-color: white !important;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover #btn-text {
+    color: black !important;
+}
+
+.btn:hover #btn-img {
+    filter: invert(100);
+}
+
+.btn:active {
+    transform: scale(0.95); 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.btn:active #btn-img {
+    transform: scale(0.9); 
+}
+
+.btn:active #btn-text {
+    transform: scale(0.9); 
+}
+

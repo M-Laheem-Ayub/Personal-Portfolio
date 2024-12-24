@@ -1,0 +1,35 @@
+.social-icon-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+
+.social-icon {
+  width: 17px;
+  height: 17px;
+  color: black;
+  transition: all 0.3 ease;
+
+}
+
+.social-icon-cont:hover {
+  background-color: black;
+
+}
+
+.social-icon-cont:hover .social-icon {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .social-icon-cont {
+    height: 42px;
+    width: 42px;
+  }
+}

@@ -1,0 +1,59 @@
+.first-text, .second-text, .third-text {
+    font-size: 47px;
+    font-family: "Sora", sans-serif;
+    font-weight: 400; /* Default weight */
+  }
+  @media (max-width: 768px) {
+    .first-text, .second-text, .third-text {
+      font-size: 30px;
+    }
+    .hero-divider{
+      width: 90% !important;
+    }
+  }
+  .second-text {
+    font-weight: 700;
+  }
+  
+  .third-text {
+    color: white;
+    font-weight: 700;
+    text-shadow: 
+      3px 3px 0px rgba(0, 0, 0, 1),
+      -3.5px -3.5px 0px rgba(0, 0, 0, 1),
+      3px -3.5px 0px rgba(0, 0, 0, 1),
+      -3.5px 3px 0px rgba(0, 0, 0, 1);
+  }
+  .third-text::selection {
+    color: black;
+    font-weight: 700;
+    text-shadow: 
+      3px 3px 0px white,
+      -3.5px -3.5px 0px white,
+      3px -3.5px 0px white,
+      -3.5px 3px 0px white;
+  }
+  .hero-img{
+    width: 85%;
+  }
+  .hero-divider{
+    height: 2px;
+    width: 55%;
+    background-color: black;
+    position: absolute;
+    right: 5%;
+  }
+
+  .hero-text{
+    font-size: 14px;
+    font-family: "Sora", sans-serif;
+    color: #71717A;
+  }
+  .hero-text::selection{
+    color: #71717A;
+
+  }
+  .hero{
+    margin-top: 50px;
+    height: 1000000px;
+  }

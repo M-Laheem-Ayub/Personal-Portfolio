@@ -1,33 +1,17 @@
+/* Header Styling */
 #my-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 10;
-  background-color: #fff;
+  background-color: inherit; /* Inherit background for dark/light mode */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
+/* Navbar Collapse Styling for Small Screens */
 @media (max-width: 992px) {
-  .navbar-collapse {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: all 0.3 ease;
-  }
-
-
-  .r-btn {
-    margin-top: 20px;
-  }
-
-  .my-nav-collapse {
-    top: 255px !important;
-    padding-bottom: 30px;
-  }
-
   .navbar-collapse {
     display: flex;
     flex-direction: column;
@@ -40,7 +24,69 @@
     left: 0;
     width: 100%;
     z-index: 9;
-    background-color: #fff;
+    background-color: white; 
   }
 
+  .my-nav-collapse {
+    top: 255px !important;
+    padding-bottom: 30px;
+  }
+
+  .r-btn {
+    margin-top: 20px;
+  }
+}
+
+.dark-mode  .navbar-collapse {
+  background-color: #121212;
+}
+
+/* Navbar Toggler Icon Styling */
+.navbar-toggler-icon {
+  margin: 0;
+  padding: 0;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Adjustments for Dark Mode */
+.dark-mode #my-header {
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Resume Button Alignment */
+/* .r-btn {
+  margin-top: 0;
+  margin-left: auto;
+} */
+/* Theme Toggle Button Styling */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: inherit; /* Adjusts color based on theme */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.theme-toggle-btn:focus {
+  outline: none;
+}
+
+.dark-mode .theme-toggle-btn {
+  color: white; /* Light yellow for sun icon in dark mode */
+}
+.dark-mode .theme-toggle-btn:hover {
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+  /* color: black; Light yellow for sun icon in dark mode */
+  background-color: #121212 !important;
+  
+}
+
+
+.light-mode .theme-toggle-btn {
+  color: #333; /* Darker shade for moon icon in light mode */
 }

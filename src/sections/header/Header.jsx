@@ -3,20 +3,20 @@ import "./Header.css";
 import Logo from "../../components/logo/Logo";
 import Navbar from "../../components/navbar/Navbar";
 import ResumeButton from "../../components/button/ResumeButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";  // Import icons
 
-const Header = () => {
+const Header = ({ toggleTheme, isDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navRef = useRef(null); // Reference to the nav element
+  const navRef = useRef(null);
 
-  // Function to handle outside clicks
   const handleClickOutside = (event) => {
     if (navRef.current && !navRef.current.contains(event.target)) {
-      setIsMenuOpen(false); // Close the menu
+      setIsMenuOpen(false);
     }
   };
 
   useEffect(() => {
-    // Add event listener when menu is open
     if (isMenuOpen) {
       document.addEventListener("mousedown", handleClickOutside);
     } else {
@@ -28,22 +28,13 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <div id="my-header" className=" container-fluid">
+    <div id="my-header" className="container-fluid">
       <nav className="navbar navbar-expand-lg z-1" ref={navRef}>
         <div className="container-fluid px-2 px-md-4 mx-0 mx-lg-5">
           <a className="navbar-brand" href="#">
             <Logo />
           </a>
-          <button
-            className="navbar-toggler border-0"
-            type="button"
-            aria-controls="navbarSupportedContent"
-            aria-expanded={isMenuOpen}
-            aria-label="Toggle navigation"
-            onClick={() => setIsMenuOpen(!isMenuOpen)} 
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+          
           <div
             className={`collapse navbar-collapse justify-content-end ${
               isMenuOpen ? "show" : ""
@@ -60,8 +51,26 @@ const Header = () => {
           >
           <ResumeButton setIsMenuOpen={setIsMenuOpen} />
           </div>
+          <div className="d-flex">
+          <button
+            className="navbar-toggler border-0"
+            type="button"
+            aria-controls="navbarSupportedContent"
+            aria-expanded={isMenuOpen}
+            aria-label="Toggle navigation"
+            onClick={() => setIsMenuOpen(!isMenuOpen)} 
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <button
+            className="btn theme-toggle-btn ms-3"
+            onClick={toggleTheme}
+          >
+            {/* Use FontAwesomeIcon for toggle button */}
+            <FontAwesomeIcon icon={isDarkMode ? faMoon : faSun} />
+          </button>
+          </div>
          
-
         </div>
       </nav>
     </div>

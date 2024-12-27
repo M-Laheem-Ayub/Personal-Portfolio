@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
-  width: 50px;
-  border: 2px solid black;
+  height: 50px !important;
+  width: 50px !important;
+  border: 2px solid black !important;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3 ease;
@@ -26,6 +26,22 @@
 .social-icon-cont:hover .social-icon {
   color: white;
 }
+
+.dark-mode .social-icon-cont:hover .social-icon {
+  color: black !important;
+}
+.dark-mode .social-icon-cont:hover {
+  background-color: rgba(255, 255, 255, 0.95) !important ;
+
+}
+.dark-mode .social-icon {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+.dark-mode .social-icon-cont {
+
+  border-color: rgba(255, 255, 255, 0.95)!important;
+}
+
 
 @media (max-width: 768px) {
   .social-icon-cont {

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import SocialLinksRow from "../../../components/socialLinksRow/SocialLinksRow";
+import SocialLinksRow from "../../components/socialLinksRow/SocialLinksRow";
 
 const Hero = () => {
   return (
@@ -30,8 +30,8 @@ const Hero = () => {
           </div>
           <div className="col-md-5 col-12 ">
             <img
-              src="assets/images/hero.png"
-              className="hero-img mt-5 me-md-5 me-2"
+             src={`${process.env.PUBLIC_URL}/assets/images/hero.png`}
+              className="hero-img ms-3 ms-md-0 mt-5"
               alt=""
             />
             <div className="hero-divider"></div>

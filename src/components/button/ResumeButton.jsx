@@ -17,7 +17,7 @@ const ResumeButton = ({ setIsMenuOpen }) => {
             Resume
           </div>
           <img
-            src="assets/icons/resumeBtnIcon.webp"
+            src={`${process.env.PUBLIC_URL}/assets/icons/resumeBtnIcon.webp`}
             className="mt-1"
             id="btn-img"
             alt=""

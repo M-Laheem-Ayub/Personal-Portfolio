@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -14,4 +15,8 @@ code {
 ::selection {
   background-color: black; /* Tomato */
   color: white;
+}
+.dark-mode ::selection {
+  background-color: white; /* Tomato */
+  color: black;
 }
